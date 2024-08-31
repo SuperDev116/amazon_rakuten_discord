@@ -1,0 +1,26 @@
+{
+    "name": "{{ env('APP_NAME') }}",
+    "version": "1.0",
+    "manifest_version": 3,
+    "action": {
+        "default_icon": {
+            "16": "/yahoo.png",
+            "32": "/yahoo.png",
+            "48": "/yahoo.png",
+            "128": "/yahoo.png"
+        }
+    },
+    "icons": {
+        "16": "/yahoo.png",
+        "32": "/yahoo.png",
+        "48": "/yahoo.png",
+        "128": "/yahoo.png"
+    },
+    "content_scripts": [
+        {
+            "matches": ["https://store.shopping.yahoo.co.jp/*"],
+            "js": ["inject.js"]
+        }
+    ],
+    "host_permissions": ["<all_urls>"]
+}
